@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "bootstrap.html" %}
+    <title>Document</title>
+  </head>
+  {% include "nav.html" %}
+  <body>
+    <div class="container">
+      <h1 class="text-center">Welcome to {{name}} Flask Framework</h1>
+      <img
+        src="http://127.0.0.1:5000/static/banner.jpg"
+        width="320px"
+        alt="banner"
+      />
+      <p class="text-center">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste dolor
+        ipsam quod fuga corrupti aspernatur maxime dolore est, reprehenderit
+        libero!
+      </p>
+      <h2 class="text-center">Job Openings</h2>
+      <!-- <p>{{jobs[0]["title"]}}</p> -->
+      <div>
+        <!-- like mapping -->
+        <!-- {% for job in jobs %}
+        <div>Title: {{job["title"]}}</div>
+        <div>Location: {{job["location"]}}</div>
+        {% if "salary" in job%}
+        <div>Salary: {{job["salary"]}}</div>
+        {% endif %} {% endfor %} -->
+        {% include "jobitem.html"%}
+      </div>
+      <button>Contact Us</button>
+    </div>
+  </body>
+</html>

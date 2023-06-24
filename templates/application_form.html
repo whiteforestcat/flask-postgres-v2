@@ -1,0 +1,27 @@
+<h2>Application Form</h2>
+<form action="/job/{{job.id}}/apply" method="post">
+  <!-- action directs and reroutes where the information should be stored -->
+  <!-- leave out method attribute if you want to store info in url after "?" -->
+  <div class="mb-2">
+    <label for="full_name">Full Name</label>
+    <input type="text" name="full_name" placeholder="xxx" />
+  </div>
+  <br>
+  <div class="mb-2">
+    <label for="email">Email</label>
+    <input type="text" name="email" placeholder="xxx" />
+  </div>
+  <br>
+  <div class="mb-2">
+    <label for="linked_in">LinkedIn</label>
+    <input type="text" name="linked_in" placeholder="xxx" />
+  </div>
+  <br>
+  <div class="mb-2">
+    <label for="education">Education</label>
+    <textarea name="education" id="education" cols="30" rows="10"></textarea>
+    <!-- textarea is basically multi-line input -->
+  </div>
+  <br>
+  <button type="submit">Submit</button>
+</form>

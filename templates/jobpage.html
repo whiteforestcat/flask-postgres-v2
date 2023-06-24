@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "bootstrap.html" %}
+    <title>Job Position {{job["title"]}}</title>
+</head>
+<body>
+    {% include "nav.html" %}
+    {{job}}
+    <h2>Job Position: {{job["title"]}}</h2>
+    <h2>Location: {{job.location}}</h2>
+    <h2>Salary: {{job.currency}} {{job.salary}}</h2>
+    {% include "application_form.html" %}
+
+</body>
+</html>

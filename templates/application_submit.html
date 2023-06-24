@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "bootstrap.html"%}
+    <title>Document</title>
+  </head>
+  <body>
+    {% include "nav.html" %}
+    <h1>Applciation for {{job.title}} SUBMITTED!</h1>
+    <h4>Full Name</h4>
+    <div>{{application.full_name}}</div>
+    <h4>Email</h4>
+    <div>{{application.email}}</div>
+    <h4>LinkedIn</h4>
+    <div>{{application.linked_in}}</div>
+    <h4>Education</h4>
+    <div>{{application.education}}</div>
+  </body>
+</html>
