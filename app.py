@@ -54,6 +54,15 @@ def list_jobs():
     print(type(jobs))
     return jsonify(jobs)
     # return render_template("rawdata.html", jobs=jobs)
+    
+@app.post("/api/apply")
+def apply_job():
+    data = request.get_json()
+    job_id = data.get("job_id")
+    application = data.get("application")
+    add_application_to_db(job_id, application)
+    return "application submitted"
+
 
 
 @app.get("/job/<id>")
@@ -74,7 +83,8 @@ def apply_to_job(id):
     # where keys are the name attribute of input HTML element and values are the user input values of the input box
     # can store this data in DB, see below
     add_application_to_db(id, data)
-    return render_template("application_submit.html", application=data, job=job)
+    # return render_template("application_submit.html", application=data, job=job)
+    return "application submitted"
 
 # render_template is the html page that is called when endpoint is called
 
